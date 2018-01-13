@@ -13,6 +13,7 @@ export default class App extends React.Component {
     render() {
         // define some routes for screens
         // keys like welcome and auth will become tab names
+        // DO NOT use duplicated keys
         const MainNavigator = TabNavigator({
             welcome: { screen: WelcomeScreen },
             auth: { screen: AuthScreen },
