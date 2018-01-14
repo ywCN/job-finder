@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { View, Text, ScrollView, Dimensions } from 'react-native';
+import { Button } from 'react-native-elements';
 
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Slides extends Component {
+    renderLsstSlide(index) {
+        if (index === this.props.data.length - 1) {
+            return <Button title="I am ready" raised />;
+        }
+    }
+
     renderSlides() {
-        return this.props.data.map(slide => {
+        return this.props.data.map((slide, index) => {
             return (
                 <View
                     key={slide.text}
@@ -15,6 +22,7 @@ class Slides extends Component {
                     ]}
                 >
                     <Text style={styles.textStyle}>{slide.text}</Text>
+                    {this.renderLsstSlide(index)}
                 </View>
             );
         });
@@ -22,7 +30,7 @@ class Slides extends Component {
 
     render() {
         return (
-            <ScrollView horizontal style={{ flex: 1 }} pagingEnabled>
+            <ScrollView horizontal pagingEnabled style={{ flex: 1 }}>
                 {this.renderSlides()}
             </ScrollView>
         );
@@ -37,7 +45,8 @@ const styles = {
         width: SCREEN_WIDTH
     },
     textStyle: {
-        fontSize: 30
+        fontSize: 30,
+        color: 'white'
     }
 };
 
