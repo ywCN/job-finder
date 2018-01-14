@@ -9,9 +9,8 @@ React Native based app that can view, save, and rate jobs based on location
 - React Native
     - a
     - b
-    - c
+    - AsyncStorage: to persist information for our app
 - [React Native Elements](https://github.com/react-native-training/react-native-elements)
-
 
 ## Trouble Shootings
 - unable to resolve module
