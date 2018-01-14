@@ -7,7 +7,13 @@ const SCREEN_WIDTH = Dimensions.get('window').width;
 class Slides extends Component {
     renderLsstSlide(index) {
         if (index === this.props.data.length - 1) {
-            return <Button title="I am ready" raised />;
+            return (
+                <Button
+                    title="I am ready"
+                    raised
+                    buttonStyle={styles.buttonStyle}
+                />
+            );
         }
     }
 
@@ -47,6 +53,10 @@ const styles = {
     textStyle: {
         fontSize: 30,
         color: 'white'
+    },
+    buttonStyle: {
+        backgroundColor: '#0288D1'
+        // marginTop: 15
     }
 };
 
