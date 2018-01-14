@@ -16,22 +16,27 @@ export default class App extends React.Component {
         // define some routes for screens
         // keys like welcome and auth will become tab names
         // DO NOT use duplicated keys
-        const MainNavigator = TabNavigator({
-            welcome: { screen: WelcomeScreen },
-            auth: { screen: AuthScreen },
-            main: {
-                screen: TabNavigator({
-                    map: { screen: MapScreen },
-                    deck: { screen: DeckScreen },
-                    review: {
-                        screen: StackNavigator({
-                            review: { screen: ReviewScreen },
-                            settings: { screen: SettingsScreen }
-                        })
-                    }
-                })
+        const MainNavigator = TabNavigator(
+            {
+                welcome: { screen: WelcomeScreen },
+                auth: { screen: AuthScreen },
+                main: {
+                    screen: TabNavigator({
+                        map: { screen: MapScreen },
+                        deck: { screen: DeckScreen },
+                        review: {
+                            screen: StackNavigator({
+                                review: { screen: ReviewScreen },
+                                settings: { screen: SettingsScreen }
+                            })
+                        }
+                    })
+                }
+            },
+            {
+                lazy: true
             }
-        });
+        );
         return (
             <Provider store={store}>
                 <View style={styles.container}>
