@@ -10,7 +10,7 @@ const SLIDE_DATA = [
 
 class WelcomeScreen extends Component {
     render() {
-        return <Slides />;
+        return <Slides data={SLIDE_DATA} />;
     }
 }
 
