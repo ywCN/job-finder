@@ -3,9 +3,10 @@ React Native based app that can view, save, and rate jobs based on location
 
 ## Tech Stacks
 - React
-  - a
-  - b
-  - c
+    - react-navigation: to control the flow of screens
+        - Note:it will render all its screens by default
+    - b
+    - c
 - React Native
     - a
     - b
