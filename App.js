@@ -34,7 +34,10 @@ export default class App extends React.Component {
                 }
             },
             {
-                lazy: true
+                navigationOptions: {
+                    tabBarVisible: false // hide tabBar
+                },
+                lazy: true // only load screen that user is currently using
             }
         );
         return (
