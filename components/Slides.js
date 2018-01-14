@@ -5,13 +5,14 @@ import { Button } from 'react-native-elements';
 const SCREEN_WIDTH = Dimensions.get('window').width;
 
 class Slides extends Component {
-    renderLsstSlide(index) {
+    renderLastSlide(index) {
         if (index === this.props.data.length - 1) {
             return (
                 <Button
                     title="I am ready"
                     raised
                     buttonStyle={styles.buttonStyle}
+                    onPress={this.props.onComplete}
                 />
             );
         }
@@ -28,7 +29,7 @@ class Slides extends Component {
                     ]}
                 >
                     <Text style={styles.textStyle}>{slide.text}</Text>
-                    {this.renderLsstSlide(index)}
+                    {this.renderLastSlide(index)}
                 </View>
             );
         });
