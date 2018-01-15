@@ -37,6 +37,7 @@ class DeckScreen extends Component {
         );
     }
 
+    // arrow function, so no bind
     renderNoMoreCards = () => {
         return (
             <Card title="No More Jobs">
