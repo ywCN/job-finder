@@ -38,8 +38,9 @@ export default class App extends React.Component {
                             }
                         },
                         {
+                            tabBarPosition: 'bottom', // for android
                             tabBarOptions: {
-                                labelStyle: { fontSize: 12 }
+                                labelStyle: { fontSize: 12 } // font size in tab
                             }
                         }
                     )
