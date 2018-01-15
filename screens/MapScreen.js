@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, ActivityIndicator } from 'react-native';
 import { MapView } from 'expo';
+import { connect } from 'react-redux';
+
+import * as actions from '../actions';
 
 class MapScreen extends Component {
     // init state
@@ -43,4 +46,4 @@ class MapScreen extends Component {
     }
 }
 
-export default MapScreen;
+export default connect(null, actions)(MapScreen);
