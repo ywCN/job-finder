@@ -29,7 +29,10 @@ export const fetchJobs = (region, callback) => async dispatch => {
         // console.log(data);
         callback();
     } catch (e) {
+        // since the API key is copied from other places
+        // it may reach its request quotos somethings
         console.error(e);
+        dispatch({ type: CLEAR_LIKED_JOBS });
     }
 };
 
