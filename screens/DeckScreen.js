@@ -16,6 +16,14 @@ class DeckScreen extends Component {
 
         return (
             <Card title={job.jobtitle}>
+                <View style={{ height: 300 }}>
+                    <MapView
+                        scrollEnabled={false}
+                        style={{ flex: 1 }}
+                        cacheEnabled={Platform.OS === 'android' ? true : false}
+                        initialRegion={initialRegion}
+                    />
+                </View>
                 <View style={styles.detailWrapper}>
                     <Text>{job.company}</Text>
                     <Text>{job.formattedRelativeTime}</Text>
