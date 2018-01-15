@@ -8,6 +8,9 @@ class ReviewScreen extends Component {
     // Navigator will check navigationOptions property of this class and use it
     static navigationOptions = ({ navigation }) => ({
         title: 'Review Jobs',
+        tabBarIcon: ({ tintColor }) => {
+            return <Icon name="favorite" size={30} color={tintColor} />;
+        },
         headerRight: (
             <Button
                 title="Settings"
