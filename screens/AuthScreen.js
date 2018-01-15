@@ -6,7 +6,7 @@ import * as actions from '../actions'; // import all action creators
 class AuthScreen extends Component {
     componentDidMount() {
         this.props.facebookLogin(); // one of the action creators
-        // AsyncStorage.removeItem('fb_token'); // for testing
+        // AsyncStorage.removeItem('fb_token'); // for testing logout
     }
     render() {
         return (
@@ -21,4 +21,8 @@ class AuthScreen extends Component {
     }
 }
 
-export default connect(null, actions)(AuthScreen); // inject all action creators
+function mapStateToProps({ auth }) {
+    return { token: auth.token };
+}
+
+export default connect(mapStateToProps, actions)(AuthScreen); // inject all action creators
