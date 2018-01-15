@@ -1,5 +1,6 @@
 import { FETCH_JOBS } from '../actions/types';
 
+// avoid undefined
 const INITIAL_STATE = {
     results: []
 };
