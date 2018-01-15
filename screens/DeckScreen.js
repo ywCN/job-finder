@@ -8,6 +8,13 @@ import { Card, Button, Icon } from 'react-native-elements';
 import * as actions from '../actions';
 
 class DeckScreen extends Component {
+    static navigationOptions = {
+        title: 'Jobs',
+        tabBarIcon: ({ tintColor }) => {
+            return <Icon name="description" size={30} color={tintColor} />;
+        }
+    };
+
     renderCard(job) {
         const initialRegion = {
             longitude: job.longitude,
