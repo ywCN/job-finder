@@ -27,6 +27,12 @@ class MapScreen extends Component {
         this.setState({ region });
     };
 
+    onButtonPress = () => {
+        this.props.fetchJobs(this.state.region, () => {
+            this.props.navigation.navigate('deck');
+        });
+    };
+
     render() {
         if (!this.state.mapLoaded) {
             return (
