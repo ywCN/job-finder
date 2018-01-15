@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, Platform, ScrollView } from 'react-native';
-import { Button } from 'react-native-elements';
+import { Button, Card, Icon } from 'react-native-elements';
 import { connect } from 'react-redux';
+import { MapView } from 'expo';
 
 class ReviewScreen extends Component {
     // Navigator will check navigationOptions property of this class and use it
