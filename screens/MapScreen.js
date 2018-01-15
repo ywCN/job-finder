@@ -28,6 +28,7 @@ class MapScreen extends Component {
     };
 
     onButtonPress = () => {
+        // second argument is a callback
         this.props.fetchJobs(this.state.region, () => {
             this.props.navigation.navigate('deck');
         });
