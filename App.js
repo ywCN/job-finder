@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, AsyncStorage } from 'react-native';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
 
@@ -12,6 +12,11 @@ import SettingsScreen from './screens/SettingsScreen';
 import ReviewScreen from './screens/ReviewScreen';
 
 export default class App extends React.Component {
+    componentWillMount() {
+        // remove token to log out for testing
+        // AsyncStorage.removeItem('fb_token');
+    }
+
     render() {
         // define some routes for screens
         // keys like welcome and auth will become tab names
