@@ -17,6 +17,8 @@ React Native based app that can view, save, and rate jobs based on location
     - [Facebook](https://docs.expo.io/versions/latest/sdk/facebook.html)
     - [Mapview](https://docs.expo.io/versions/latest/sdk/map-view.html)
     - [AppLoading](https://docs.expo.io/versions/latest/sdk/app-loading.html)
+- qs: create query string by using JS Object
+- latlng-to-zip: convert geocode to zip code(US)
 
 ## Trouble Shootings
 - unable to resolve module
