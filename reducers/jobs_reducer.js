@@ -6,6 +6,7 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
+        // reset job list because of changing location
         case FETCH_JOBS:
             return action.payload;
         default:
