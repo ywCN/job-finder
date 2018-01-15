@@ -4,6 +4,8 @@ import qs from 'qs';
 
 import { FETCH_JOBS } from './types';
 
+const JOB_ROOT_URL = 'http://api.indeed.com/ads/apisearch?';
+
 const JOB_QUERY_PARAMS = {
     publisher: '4201738803816157',
     format: 'json',
@@ -11,6 +13,11 @@ const JOB_QUERY_PARAMS = {
     latlong: 1, // include geocode
     radius: 10, // miles
     q: 'javascript' // job search keyword
+};
+
+const buildJobsUrl = zip => {
+    const query = qs.stringify({ ...JOB_QUERY_PARAMS, l: zip });
+    return `${JOB_ROOT_URL}${query}`;
 };
 
 export const fetchJobs = region => async dispatch => {
