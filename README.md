@@ -4,8 +4,10 @@ React Native based app that can view, save, and rate jobs based on location
 ## Tech Stacks
 - React
     - react-navigation: to control the flow of screens
-        - Note:it will render all its screens by default
-        - to disable this: pass {lazy: true} as second object
+        - Note: it will render all its screens by default
+            - to disable this: pass {lazy: true} in the second object
+            - Note: use this version in `package.json`
+                - `"react-navigation": "1.0.0-beta.22",`
     - b
     - c
 - React Native
@@ -17,7 +19,7 @@ React Native based app that can view, save, and rate jobs based on location
     - [Facebook](https://docs.expo.io/versions/latest/sdk/facebook.html)
     - [Mapview](https://docs.expo.io/versions/latest/sdk/map-view.html)
     - [AppLoading](https://docs.expo.io/versions/latest/sdk/app-loading.html)
-- qs: create query string by using JS Object
+- qs(query string): create query string by using JS Object
 - latlng-to-zip: convert geocode to zip code(US)
 
 ## Trouble Shootings
