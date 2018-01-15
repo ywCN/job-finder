@@ -7,7 +7,21 @@ class AuthScreen extends Component {
     componentDidMount() {
         this.props.facebookLogin(); // one of the action creators
         // AsyncStorage.removeItem('fb_token'); // for testing logout
+
+        // following line is optional for this app, but may be useful for other flows
+        // this.onAuthComplete(this.props);
     }
+
+    componentWillReceiveProps(nextProps) {
+        this.onAuthComplete(nextProps);
+    }
+
+    onAuthComplete(props) {
+        if (props.token) {
+            this.props.navigation.navigate('map');
+        }
+    }
+
     render() {
         return (
             <View>
