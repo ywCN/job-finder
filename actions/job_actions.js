@@ -7,10 +7,10 @@ import { FETCH_JOBS } from './types';
 const JOB_QUERY_PARAMS = {
     publisher: '4201738803816157',
     format: 'json',
-    v: '2',
-    latlong: 1,
-    radius: 10,
-    q: 'javascript'
+    v: '2', // API version 2
+    latlong: 1, // include geocode
+    radius: 10, // miles
+    q: 'javascript' // job search keyword
 };
 
 export const fetchJobs = region => async dispatch => {
