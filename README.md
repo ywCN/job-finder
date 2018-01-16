@@ -1,7 +1,7 @@
 # job-finder
 React Native based app that can view, save, and rate jobs based on location
 
-![Alt Text](https://media.giphy.com/media/xULW8nL7RhlL32MN7a/giphy.gif)
+![Alt Text](https://raw.githubusercontent.com/ywCN/job-finder/master/downsized-large.gif)
 
 ## Tech Stacks
 - React
