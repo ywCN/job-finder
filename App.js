@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, AsyncStorage } from 'react-native';
+import { StyleSheet, Text, View, AsyncStorage, Alert } from 'react-native';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
+import { Notifications } from 'expo';
 
 import store from './store'; // the redux store
 import AuthScreen from './screens/AuthScreen';
@@ -10,8 +11,20 @@ import MapScreen from './screens/MapScreen';
 import DeckScreen from './screens/DeckScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ReviewScreen from './screens/ReviewScreen';
+import registerForNotifications from './services/push_notifications';
 
 export default class App extends React.Component {
+    componentDidMount() {
+        registerForNotifications();
+        Notifications.addListener(notification => {
+            const { data: { text }, origin } = notification;
+
+            if (origin === 'received' && text) {
+                Alert.alert('New Push Notification', text, [{ text: 'Ok.' }]);
+            }
+        });
+    }
+
     componentWillMount() {
         // remove token to log out for testing
         // AsyncStorage.removeItem('fb_token');
