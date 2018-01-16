@@ -33,7 +33,7 @@ export default class App extends React.Component {
 
     componentWillMount() {
         // remove token to log out for testing
-        // AsyncStorage.removeItem('fb_token');
+        AsyncStorage.removeItem('fb_token');
     }
 
     render() {
