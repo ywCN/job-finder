@@ -14,6 +14,12 @@ import ReviewScreen from './screens/ReviewScreen';
 import registerForNotifications from './services/push_notifications';
 
 export default class App extends React.Component {
+    // To test push notification
+    //
+    // 1. open app on device via Expo, check log
+    // 2. if null, restart app until seeing token like ExponentPushToken[oooooxxxxx]
+    // 3. go to http://rallycoding.herokuapp.com/api/tokens
+    // 4. paste token, enter messege, hit enter
     componentDidMount() {
         registerForNotifications();
         Notifications.addListener(notification => {
