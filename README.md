@@ -14,6 +14,7 @@ React Native based app that can view, save, and rate jobs based on location
     - a
     - b
     - AsyncStorage: to persist information for our app
+- [Redux Persist](https://github.com/rt2zz/redux-persist): Persist and rehydrate a redux store.
 - [React Native Elements](https://github.com/react-native-training/react-native-elements)
 - expo
     - [Facebook](https://docs.expo.io/versions/latest/sdk/facebook.html)
