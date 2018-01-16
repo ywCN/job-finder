@@ -3,14 +3,19 @@ React Native based app that can view, save, and rate jobs based on location
 
 ## Tech Stacks
 - React
-    - react-navigation: to control the flow of screens
+    - [React Navigation](https://reactnavigation.org/): to control the flow of screens
         - Note: it will render all its screens by default
             - to disable this: pass {lazy: true} in the second object
             - Note: use this version in `package.json`
                 - `"react-navigation": "1.0.0-beta.22",`
-    - react-native-elements
+    - [React Native Elements](https://github.com/react-native-training/react-native-elements)
 - React Native
     - AsyncStorage: to persist app data
+    - Animated module: handles animation output
+    - PanResponder: handles user gestures
+    - Dimensions: retrive width and height
+    - LayoutAnimation: for testing android layout animation
+    - UIManager: for layout animation like a stack of cards bouncing up
 - Redux
     - [Redux Persist](https://github.com/rt2zz/redux-persist): Persist and rehydrate a redux store.
     - redux-thunk
