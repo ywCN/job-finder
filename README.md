@@ -8,13 +8,12 @@ React Native based app that can view, save, and rate jobs based on location
             - to disable this: pass {lazy: true} in the second object
             - Note: use this version in `package.json`
                 - `"react-navigation": "1.0.0-beta.22",`
-    - b
-    - c
+    - react-native-elements
 - React Native
-    - a
-    - b
-    - AsyncStorage: to persist information for our app
-- [Redux Persist](https://github.com/rt2zz/redux-persist): Persist and rehydrate a redux store.
+    - AsyncStorage: to persist app data
+- Redux
+    - [Redux Persist](https://github.com/rt2zz/redux-persist): Persist and rehydrate a redux store.
+    - redux-thunk
 - [React Native Elements](https://github.com/react-native-training/react-native-elements)
 - expo
     - [Facebook](https://docs.expo.io/versions/latest/sdk/facebook.html)
@@ -22,6 +21,7 @@ React Native based app that can view, save, and rate jobs based on location
     - [AppLoading](https://docs.expo.io/versions/latest/sdk/app-loading.html)
 - qs(query string): create query string by using JS Object
 - latlng-to-zip: convert geocode to zip code(US)
+- lodash
 
 ## Trouble Shootings
 - unable to resolve module
