@@ -1,6 +1,8 @@
 # job-finder
 React Native based app that can view, save, and rate jobs based on location
 
+![Alt Text](https://media.giphy.com/media/xULW8nL7RhlL32MN7a/giphy.gif)
+
 ## Tech Stacks
 - React
     - [React Navigation](https://reactnavigation.org/): to control the flow of screens
