@@ -32,6 +32,8 @@ React Native based app that can view, save, and rate jobs based on location
 - lodash
 
 ## Trouble Shootings
+- components not rendering, no error
+    - missing return statement in helper function if using lodash
 - unable to resolve module
     - check typos in name, export, import
     - [steps](https://github.com/facebook/react-native/issues/4968)
